@@ -77,8 +77,7 @@ fun RegisterPageContent(navController: NavController){
                 GlobalScope.launch(Dispatchers.Main) {
                     userDao.insertOne(newUser)
                 }
-                viewModel.inAccount.value = true
-                navController.navigate(Screen.Opening.route)
+                navController.navigate("Main/" + uuid)
             }
         }) {
             Text(text = "Create Account")

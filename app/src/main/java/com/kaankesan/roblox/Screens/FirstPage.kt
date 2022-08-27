@@ -12,12 +12,12 @@ import com.kaankesan.roblox.objects.Screen
 @Composable
 fun FirstPage(navController: NavController){
     Column(modifier = Modifier
-        .fillMaxSize(), verticalArrangement = Arrangement.Bottom
+        .fillMaxSize(), verticalArrangement = Arrangement.SpaceEvenly
         , horizontalAlignment = Alignment.CenterHorizontally) {
         Button(onClick = { navController.navigate(Screen.Register.route) }) {
             Text(text = "Sign in")
         }
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate(Screen.Main.route) }) {
             Text(text = "Login")
         }
 

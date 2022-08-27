@@ -13,6 +13,9 @@ interface UserDao {
     @Query("SELECT * FROM user WHERE Name LIKE :first")
     suspend fun findByName(first: String) : User
 
+    @Query("SELECT * FROM user WHERE id LIKE :uuid")
+    suspend fun getOne(uuid:String): User
+
     @Insert
     suspend fun insertAll(vararg users: User)
 
