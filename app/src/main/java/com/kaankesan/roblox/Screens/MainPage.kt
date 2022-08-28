@@ -118,7 +118,7 @@ fun MainPageContent(navController: NavController){
     ).build()
     val userDao = db.userDao()
     navController.currentBackStackEntry.let {
-         name = it?.arguments!!.getString("name").toString()
+         name = it?.arguments?.getString("name").toString()
     }
 
     LaunchedEffect(key1 = true){

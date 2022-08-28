@@ -14,6 +14,7 @@ fun FirstPage(navController: NavController){
     Column(modifier = Modifier
         .fillMaxSize(), verticalArrangement = Arrangement.SpaceEvenly
         , horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(text = "Login Button Is Not Available")
         Button(onClick = { navController.navigate(Screen.Register.route) }) {
             Text(text = "Sign in")
         }

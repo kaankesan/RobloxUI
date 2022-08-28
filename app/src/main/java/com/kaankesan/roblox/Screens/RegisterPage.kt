@@ -20,6 +20,7 @@ import com.kaankesan.roblox.database.User
 import com.kaankesan.roblox.database.UserDatabase
 import com.kaankesan.roblox.objects.Screen
 import com.kaankesan.roblox.viewModel.SharedViewModel
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -47,9 +48,9 @@ fun TopBar(navController: NavController){
     )
 }
 
+@OptIn(DelicateCoroutinesApi::class)
 @Composable
 fun RegisterPageContent(navController: NavController){
-    val viewModel: SharedViewModel = viewModel()
     val context = LocalContext.current
     val name = remember{ mutableStateOf("")}
     val mail = remember{ mutableStateOf("")}
@@ -82,7 +83,7 @@ fun RegisterPageContent(navController: NavController){
         }) {
             Text(text = "Create Account")
         }
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate(Screen.Main.route) }) {
             Text(text = "Sign in")
         }
     }
