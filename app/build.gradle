@@ -75,4 +75,18 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
 
+    implementation "com.google.dagger:hilt-android:2.42"
+    annotationProcessor "com.google.dagger:hilt-compiler:2.42"
+
+    androidTestImplementation  'com.google.dagger:hilt-android-testing:2.42'
+    androidTestAnnotationProcessor 'com.google.dagger:hilt-compiler:2.42'
+
+    testImplementation 'com.google.dagger:hilt-android-testing:2.42'
+    testAnnotationProcessor 'com.google.dagger:hilt-compiler:2.42'
+
+
+}
+
+kapt {
+    correctErrorTypes true
 }

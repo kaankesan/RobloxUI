@@ -19,8 +19,9 @@ import com.kaankesan.roblox.database.User
 import com.kaankesan.roblox.objects.Screen
 import com.kaankesan.roblox.ui.theme.RobloxTheme
 import com.kaankesan.roblox.viewModel.SharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,11 +51,11 @@ fun UsersApplication(){
         
         composable(
             route = Screen.Main.route,
-            arguments = listOf(navArgument("uuid"){
+            arguments = listOf(navArgument("name"){
                 type = NavType.StringType
             })
         ){
-            MainPage(navController = navController)
+            MainPage(navController = navController, viewModel = vieModel)
         }
     }
 }

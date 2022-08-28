@@ -4,5 +4,5 @@ sealed class Screen(val route:String) {
     object Login : Screen("Login")
     object Register: Screen("Register")
     object Opening : Screen("Opening")
-    object Main: Screen("Main/{uuid}")
+    object Main: Screen("Main/{name}")
 }

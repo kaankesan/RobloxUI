@@ -77,7 +77,7 @@ fun RegisterPageContent(navController: NavController){
                 GlobalScope.launch(Dispatchers.Main) {
                     userDao.insertOne(newUser)
                 }
-                navController.navigate("Main/" + uuid)
+                navController.navigate("Main/" + name.value)
             }
         }) {
             Text(text = "Create Account")
